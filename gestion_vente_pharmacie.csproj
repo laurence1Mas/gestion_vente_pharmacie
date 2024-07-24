@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55F73DAF-3FC0-4038-9F26-99D4D042BC7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gestion_vente_pharmacie</RootNamespace>
+    <AssemblyName>gestion_vente_pharmacie</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\clsAchat.cs" />
+    <Compile Include="classes\clscategorie.cs" />
+    <Compile Include="classes\clsfournisseur.cs" />
+    <Compile Include="classes\clslivraison.cs" />
+    <Compile Include="classes\clsmedicament.cs" />
+    <Compile Include="classes\Clspanier.cs" />
+    <Compile Include="classes\clspatient.cs" />
+    <Compile Include="classes\clsPayement.cs" />
+    <Compile Include="classes\clsStock.cs" />
+    <Compile Include="classes\connexion.cs" />
+    <Compile Include="classes\MYCONNECTION.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="repots\facturevente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\facturevente.Designer.cs">
+      <DependentUpon>facturevente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repots\ficheachat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\ficheachat.Designer.cs">
+      <DependentUpon>ficheachat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repots\listePatients.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\listePatients.Designer.cs">
+      <DependentUpon>listePatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repots\listFournisseur.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\listFournisseur.Designer.cs">
+      <DependentUpon>listFournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repots\listLivraison.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\listLivraison.Designer.cs">
+      <DependentUpon>listLivraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repots\listMedicament.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\listMedicament.Designer.cs">
+      <DependentUpon>listMedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repots\recupayement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repots\recupayement.Designer.cs">
+      <DependentUpon>recupayement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userachat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userachat.Designer.cs">
+      <DependentUpon>userachat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userfournisseur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userfournisseur.Designer.cs">
+      <DependentUpon>userfournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userlivraison.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userlivraison.Designer.cs">
+      <DependentUpon>userlivraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\usermedicament.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\usermedicament.Designer.cs">
+      <DependentUpon>usermedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userpanier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userpanier.Designer.cs">
+      <DependentUpon>userpanier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userpatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userpatient.Designer.cs">
+      <DependentUpon>userpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userpayement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userpayement.Designer.cs">
+      <DependentUpon>userpayement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\userstock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\userstock.Designer.cs">
+      <DependentUpon>userstock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="repots\facturevente.resx">
+      <DependentUpon>facturevente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repots\ficheachat.resx">
+      <DependentUpon>ficheachat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repots\listePatients.resx">
+      <DependentUpon>listePatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repots\listFournisseur.resx">
+      <DependentUpon>listFournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repots\listLivraison.resx">
+      <DependentUpon>listLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repots\listMedicament.resx">
+      <DependentUpon>listMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repots\recupayement.resx">
+      <DependentUpon>recupayement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userachat.resx">
+      <DependentUpon>userachat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userfournisseur.resx">
+      <DependentUpon>userfournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userlivraison.resx">
+      <DependentUpon>userlivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\usermedicament.resx">
+      <DependentUpon>usermedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userpanier.resx">
+      <DependentUpon>userpanier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userpatient.resx">
+      <DependentUpon>userpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userpayement.resx">
+      <DependentUpon>userpayement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\userstock.resx">
+      <DependentUpon>userstock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\img\medicaments.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\img\gettyimages-523174932-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\fournisseur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\medicament.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\categorie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\livraison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\achat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\payement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\user_240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\login_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\shopping_cart_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icones\add_shopping_cart_48px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
